@@ -63,7 +63,7 @@ class App extends Component {
 
         <ol>
            {arr.map( (item , index) => {
-            return <li key={`location${index + 1}`}>{item[0]} {item.name} ( {item.country} )</li>;
+            return <li key={`location${index + 1}`}>{item[0]} {item.name}</li>;
           })}
         </ol>
          
