@@ -17,7 +17,7 @@ class App extends Component {
     { name: 'Museum Island', country: 'Germany' },
     { name: 'Munnar', country: 'India' },
     { name: 'Leh Ladakh', country: 'India' },
-    { name: 'Goa', country: 'India' },
+    // { name: 'Goa', country: 'India' },
     { name: 'Agra', country: 'India' },
     { name: 'Dalhousie', country: 'India' },
     { name: 'Coorg', country: 'India' },
@@ -37,10 +37,37 @@ class App extends Component {
     ]
   }
 
+  
+
   render() {
+
+    var arr = [];
+
+    this.cityList.forEach( function (cityname){
+      if(cityname.name=='Goa' || cityname.name=='Amsterdam' || cityname.name=='New York' || cityname.name=='Darjeeling' || cityname.name=='Tokyo' || cityname.name=='Lonavala'){
+        arr.push(cityname);
+      }
+    })
+
+    console.log("array is : ", arr);
+    // console.log(this.cityList);YYY
+    // var length = this.cityList.length;
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+        
+        {/* var newArr = {this.cityList.map( item => {
+          return { name : item.name , country : item.country }
+        })}
+
+        console.log(newArr); */}
+
+        <ol>
+           {arr.map( (item , index) => {
+            return <li key={`location${index + 1}`}>{item[0]} {item.name} ( {item.country} )</li>;
+          })}
+        </ol>
+         
+
       </div>
     )
   }
