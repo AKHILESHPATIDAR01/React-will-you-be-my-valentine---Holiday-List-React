@@ -49,7 +49,11 @@ class App extends Component {
       }
     })
 
-    console.log("array is : ", arr);
+    let indianCity = this.arr.filter((city,i)=>(city.country=='India'));
+    
+    
+    
+//     console.log("array is : ", arr);
     // console.log(this.cityList);YYY
     // var length = this.cityList.length;
     return (
@@ -62,7 +66,7 @@ class App extends Component {
         console.log(newArr); */}
 
         <ol>
-           {arr.map( (item , index) => {
+           {indianCity.map( (item , index) => {
             return <li key={`location${index + 1}`}>{item[0]} {item.name}</li>;
           })}
         </ol>
