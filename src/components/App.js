@@ -64,12 +64,15 @@ class App extends Component {
         })}
 
         console.log(newArr); */}
-
         <ol>
+          {iii.map((city,index)=> <li key={`location${index+1}`}>{city.name}(India)</li>)}
+        </ol>
+      
+        {/* <ol>
            {indianCity.map( (item , index) => {
             return <li key={`location${index + 1}`}>{item[0]} {item.name}</li>;
           })}
-        </ol>
+        </ol> */}
          
 
       </div>
