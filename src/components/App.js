@@ -49,7 +49,7 @@ class App extends Component {
       }
     })
 
-    let indianCity = this.arr.filter((city,i)=>(city.country=='India'));
+    let indianCity = arr.filter((city,i)=>(city.country=='India'));
     
     
     
