@@ -51,7 +51,7 @@ class App extends Component {
 
     let indianCity = arr.filter((city,i)=>(city.country=='India'));
     
-    
+    let iii = [...indianCity];
     
 //     console.log("array is : ", arr);
     // console.log(this.cityList);YYY
